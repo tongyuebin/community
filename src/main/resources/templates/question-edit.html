@@ -1,0 +1,254 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>好玩社区</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="./static/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./static/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="./static/css/community.css">
+    <link rel="icon" href="./static/images/logo.png" type="image/x-icon"/>
+	<link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css">
+    <script src="./static/js/jquery-3.4.1.min.js"></script>
+    <script src="./static/js/bootstrap.min.js" type="application/javascript"></script>
+    <script src="./static/js/community.js" type="application/javascript"></script>
+	
+	<link rel="stylesheet" href="./static/editormd/css/editormd.css" />
+	<script src="./static/editormd/editormd.min.js"></script>
+<script type="text/javascript">
+    $(function() {
+        var editor = editormd("question-editor", {
+			width:"100%",
+			height:350,
+			delay: 0,
+			watch: false,
+			emoji:true,
+			placeholder: "请输入问题描述",
+			imageUpload: true,
+			imageFormats: ["jpg", "jpeg", "gif", "png", "bmp", "webp"],
+			imageUploadURL: "/file/upload",
+            path:"./static/editormd/lib/"
+        });
+    });
+</script>
+</head>
+<body>
+
+<!--导航条-->
+   <nav class="navbar navbar-default">
+        <div class="container-fluid">
+		
+            <div class="navbar-header">
+				<!--此处代码便于移动端显示-->
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">好玩社区</span>
+                </button>
+				
+                <a class="navbar-brand" href="./index.html">好玩社区</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				 <form class="navbar-form navbar-left">
+					<div class="form-group">
+					  <input type="text" class="form-control">
+					</div>
+					<button type="submit" class="btn btn-default">搜索</button>
+				  </form>
+				    <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">提问</a></li>
+                    <li><a href="#">通知<span class="badge">10</span></a></li>
+					
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                           aria-expanded="false">
+                            <span>月下墨客</span>
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+							<li><a href="./person.html">个人中心</a></li>
+                            <li><a href="#">我的问题</a></li>
+                            <li><a href="#">退出登录</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">登录</a></li>
+                </ul>
+            </div>
+			
+			<div>
+    </nav>
+	
+<div class="container-fluid main">
+    <div class="row">
+        <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+            <h2><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> 发起</h2>
+            <hr>
+
+            <form action="#" method="post">
+				<!--存储当前问题的id-->
+                <input type="hidden" name="id">
+                <div class="form-group">
+                    <label for="title">问题标题（简单扼要）:&nbsp;&nbsp;<span class="">标题不能为空</span></label>
+                    <input type="text" class="form-control" id="title" name="title"
+                           placeholder="问题标题……"
+                           autocomplete="off">
+                </div>
+                <div class="form-group" id="question-editor">
+                    <label for="description">问题补充 (必填，请参照右侧提示):&nbsp;&nbsp;<span class="">内容不能为空</span></label></label>
+					<textarea style="display:none"
+								   name="description" 
+								   id="description" 
+								   class="form-control"
+								   cols="30"
+								   rows="10">
+					</textarea>
+                </div>
+                <div class="form-group">
+                    <label for="tag">添加标签:&nbsp;&nbsp;<span class="">标签不能为空</span></label></label>
+                    <input type="text" class="form-control" id="tag" name="tag"
+                           autocomplete="off"
+                           placeholder="输入标签，以，号分隔"
+                           onclick="showSelectTag()">
+						   
+                    <div id="select-tag" class="publish-tag-tab">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active">
+                                <a href="#subject" aria-controls="subject" role="tab" data-toggle="tab">学科</a>
+                            </li>
+                           <li role="presentation" class="">
+                                <a href="#program" aria-controls="program" role="tab" data-toggle="tab">编程</a>
+                            </li>						
+                        </ul>
+                        <div class="tab-content">
+                            <div role="tabpanel" id="subject" class="active tab-pane">
+                                <table>
+                                    <tr>
+                                    <td class="community-tag" onclick="selectTag(this)"
+										data-tag="${selectTag}">英语
+                                    </td>	
+                                    <td class="community-tag" onclick="selectTag(this)"
+										data-tag="${selectTag}">英语
+                                    </td>		
+                                    <td class="community-tag" onclick="selectTag(this)"
+										data-tag="${selectTag}">英语
+                                    </td>		
+                                    <td class="community-tag" onclick="selectTag(this)"
+										data-tag="${selectTag}">英语
+                                    </td>		
+                                    <td class="community-tag" onclick="selectTag(this)"
+										data-tag="${selectTag}">英语
+                                    </td>		
+                                    <td class="community-tag" onclick="selectTag(this)"
+										data-tag="${selectTag}">英语
+                                    </td>	
+                                    <td class="community-tag" onclick="selectTag(this)"
+										data-tag="${selectTag}">英语
+                                    </td>	
+                                    <td class="community-tag" onclick="selectTag(this)"
+										data-tag="${selectTag}">英语
+                                    </td>		
+                                    <td class="community-tag" onclick="selectTag(this)"
+										data-tag="${selectTag}">英语
+                                    </td>		
+                                    <td class="community-tag" onclick="selectTag(this)"
+										data-tag="${selectTag}">英语
+                                    </td>		
+                                    <td class="community-tag" onclick="selectTag(this)"
+										data-tag="${selectTag}">英语
+                                    </td>		
+                                    <td class="community-tag" onclick="selectTag(this)"
+										data-tag="${selectTag}">英语
+                                    </td>							
+                                    <td class="community-tag" onclick="selectTag(this)"
+										data-tag="${selectTag}">英语
+                                    </td>	
+                                    <td class="community-tag" onclick="selectTag(this)"
+										data-tag="${selectTag}">英语
+                                    </td>		
+                                    <td class="community-tag" onclick="selectTag(this)"
+										data-tag="${selectTag}">英语
+                                    </td>		
+                                    <td class="community-tag" onclick="selectTag(this)"
+										data-tag="${selectTag}">英语
+                                    </td>		
+                                    <td class="community-tag" onclick="selectTag(this)"
+										data-tag="${selectTag}">英语
+                                    </td>		
+                                    <td class="community-tag" onclick="selectTag(this)"
+										data-tag="${selectTag}">英语
+                                    </td>							
+                                    <td class="community-tag" onclick="selectTag(this)"
+										data-tag="${selectTag}">英语
+                                    </td>	
+                                    <td class="community-tag" onclick="selectTag(this)"
+										data-tag="${selectTag}">英语
+                                    </td>		
+                                    <td class="community-tag" onclick="selectTag(this)"
+										data-tag="${selectTag}">英语
+                                    </td>		
+                                    <td class="community-tag" onclick="selectTag(this)"
+										data-tag="${selectTag}">英语
+                                    </td>		
+                                    <td class="community-tag" onclick="selectTag(this)"
+										data-tag="${selectTag}">英语
+                                    </td>		
+                                    <td class="community-tag" onclick="selectTag(this)"
+										data-tag="${selectTag}">英语
+                                    </td>							
+                                    <td class="community-tag" onclick="selectTag(this)"
+										data-tag="${selectTag}">英语
+                                    </td>	
+                                    <td class="community-tag" onclick="selectTag(this)"
+										data-tag="${selectTag}">英语
+                                    </td>		
+                                    <td class="community-tag" onclick="selectTag(this)"
+										data-tag="${selectTag}">英语
+                                    </td>		
+                                    <td class="community-tag" onclick="selectTag(this)"
+										data-tag="${selectTag}">英语
+                                    </td>		
+                                    <td class="community-tag" onclick="selectTag(this)"
+										data-tag="${selectTag}">英语
+                                    </td>		
+                                    <td class="community-tag" onclick="selectTag(this)"
+										data-tag="${selectTag}">英语
+                                    </td>																
+									</tr>								
+                                </table>
+                            </div>
+                            <div role="tabpanel" id="program" class="tab-pane">
+                                <table>
+                                    <tr>
+                                    <td class="community-tag" onclick="selectTag(this)"
+										data-tag="${selectTag}">java
+                                    </td>		
+                                    <td class="community-tag" onclick="selectTag(this)"
+										data-tag="${selectTag}">python
+                                    </td>									
+									</tr>								
+                                </table>
+                            </div>							
+                        </div>
+                    </div>
+                </div>
+				
+			  <div class="form-group">
+				<label for="exampleInputFile">上传附件</label>
+				<input type="file" id="exampleInputFile">
+				<p class="help-block">文件上传成功提示信息</p>
+			  </div>
+			  <button type="submit" class="btn btn-success btn-publish ">发布</button>
+            </form>
+        </div>
+        <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+            <h3>问题发起指南</h3>
+            • 问题标题: 请用精简的语言描述您发布的问题，不超过25字 <br>
+            • 问题补充: 详细补充您的问题内容，并确保问题描述清晰直观, 并提供一些相关的资料<br>
+            • 选择标签: 选择一个或者多个合适的标签，用逗号隔开，每个标签不超过10个字<br>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div>Copyright © 2019  ICP备000000号xxxxxxx</div>
+</div>
+</body>
+</html>

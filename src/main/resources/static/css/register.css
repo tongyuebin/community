@@ -1,0 +1,107 @@
+body{
+	width:100%;
+	height:100%;
+	margin:0px;
+	padding:0px;
+	color: #666;
+}
+
+.login{
+	width:100%;
+	height:100%;
+	position:absolute;
+	background:url('../images/backgroud.jpg') no-repeat center;
+	background-size: 100% 100%;
+}
+.login-page{
+	width:29%;
+	height:auto;
+	padding:1%;
+	box-sizing:border-box;
+	margin:4% 0 0 55%;
+	border：1px solid red;
+}
+
+.login-form{
+	width:100%;
+	height:60%;
+	text-align: center;
+	font-size: 18px;
+	margin-bottom: 20px;
+	line-height: 5px;
+}
+.login-form ul{
+	list-style:none;
+}		
+.login-form ul li{
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	position: relative;
+	margin: 10px 40px;
+	padding: 0 10px !important;
+}
+
+.login-form ul li input{
+	width: 80%;
+	height: 35px;
+	border-bottom: 1px solid #ececec !important;
+	border: none;
+	padding: 0 10px 0 25px;
+}
+
+a{
+	cursor:pointer;
+	text-decoration:none;
+}
+
+
+
+.login-form-icon {
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    width: 38px;
+    line-height: 36px;
+    text-align: center;
+    color: #d2d2d2;
+}
+
+
+.login-other {
+    position: relative;
+    font-size: 0;
+    line-height: 38px;
+    padding-top: 20px;
+}
+
+.login-other > * {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    font-size: 14px;
+}
+.login-other .layui-icon {
+    position: relative;
+    top: 2px;
+    font-size: 26px;
+}
+
+.layui-icon-login-qq {
+    color:  #3492ED;
+}
+
+.layui-icon-login-wechat {
+    color:  #4DAF29;
+}
+.layui-icon-login-weibo {
+    color:  #CF1900;
+}
+
+
+.layadmin-user-login-codeimg {
+    max-height: 38px;
+    width: 70%;
+    cursor: pointer;
+    box-sizing: border-box;
+}

@@ -1,0 +1,77 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>好玩社区</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<link rel="stylesheet" th:href="@{/css/login.css}">
+	<link rel="stylesheet" th:href="@{/font-awesome-4.7.0/css/font-awesome.min.css}">
+	<!--引入layui-->
+	<link rel="stylesheet" th:href="@{/layui/css/layui.css}" media="all">
+	<script th:src="@{/layui/layui.js}"></script>
+	<script>
+		layui.use(['form'],function(){
+			var form=layui.form;
+			//自定义验证规则
+			form.verify({
+			isExist:function(value){
+				//验证是否重复
+			}
+			,valid: [/^[\u4e00-\u9fa5a-zA-Z0-9]+@+$/,'不能含有非法字符'] 
+			,password: [ /^[\S]{6,12}$/,'密码必须6到12位，且不能出现空格']
+		  });
+		});
+		
+	</script>
+</head>
+<body>
+<div class="login">
+	<div class="login-page">
+		<div class="login-form">
+			<h3 style="line-height:40px;">欢迎登录</h3>
+				<form class="layui-form" method="post" th:action="@{/login}">
+				<ul>
+					<li>
+						<label class="login-form-icon layui-icon layui-icon-vercode" for="email"></label>
+						<input id="email" type="text" name="email" lay-verify="required|email|isExist" autocomplete="off" placeholder="邮箱" class="layui-input">
+					</li>
+					<li>
+						<label class="login-form-icon layui-icon layui-icon-password" for="password"></label>
+						<input id="password"type="text" name="password" lay-verify="required|valid|number" autocomplete="off" placeholder="密码" class="layui-input">
+					</li>
+					<li>
+						<div class="row">			
+							<div style="width:46%;float:left;">
+								<label class="login-form-icon layui-icon layui-icon-vercode" for="vercode"></label>
+								<input type="text" name="vercode" id="vercode" lay-verify="required" placeholder="图形验证码" class="layui-input">
+							</div>
+							<div style="width:35%;float:left;margin-left: -14px;">
+								<img src="https://www.oschina.net/action/user/captcha" class="layadmin-user-login-codeimg" id="vercodeimg">
+						</div>
+						</div>
+					</li>
+	
+					<li style="margin-left:-46px;">
+					        <input type="checkbox" name="remember" lay-skin="primary" title="记住密码">
+							<a th:href="@{/user/forget}" style="margin-top:7px;color:#029789;float:right;">忘记密码？</a>
+					</li>
+					<li style="margin:0px 0px;">
+					    <button type="button" class="layui-btn layui-btn-danger" style="width:80%;">密码错误</button>
+					</li>
+					<li style="margin:0px 0px;">
+						<button type="submit" class="layui-btn" lay-submit="" lay-filter="demo1" style="width:80%;">登录</button>
+					</li>
+				</ul>
+			</form>
+		</div>
+		<div class="login-other">
+        <label>社交账号登录</label>
+		<a th:href="@{https://github.com/login/oauth/authorize(client_id=${client_id},scope=${scope},state=${state},redirect_uri=${redirect_uri})}"><i class="fa fa-github fa-2x" style="margin-top:10px"></i></a>
+        <a><i class="layui-icon layui-icon-login-qq"></i></a>
+        <a><i class="layui-icon layui-icon-login-wechat"></i></a>
+        <a><i class="layui-icon layui-icon-login-weibo"></i></a>
+        <a th:href="@{/tologin}" style="float:right;color:#029789;">用已有帐号登入</a>
+      </div>
+	</div>
+</div>
+</body>
+</html>

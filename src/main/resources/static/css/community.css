@@ -1,0 +1,275 @@
+.aw-common-list{
+	width:100%;
+}
+.aw-item{
+	width:100%;
+	border-bottom:1px solid #f5f5f5;
+}
+body {
+    background-color: #efefef;
+}
+
+.main {
+    background-color: white;
+    margin: 30px;
+}
+
+.side {
+    margin: 5px 0;
+}
+
+.top-header {
+    padding-left: 20px;
+}
+
+.community-tag:hover {
+    background-color: #339dff;
+    text-decoration-line: none;
+}
+
+.community-tag {
+    text-decoration-line: none;
+    cursor: pointer;
+    display: inline-block;
+    height: 20px;
+    line-height: 16px;
+    padding: 2px 5px;
+    background-color: #99cfff;
+    font-size: 12px;
+    color: #fff !important;
+    border-radius: 4px;
+    margin: 4px;
+}
+
+.btn-publish {
+    float: right;
+    margin-bottom: 15px;
+}
+
+.media-object {
+    width: 38px;
+    height: 38px;
+}
+
+.media-body {
+    padding-top: 10px;
+}
+
+.text-desc {
+    font-size: 12px;
+    font-weight: normal;
+    color: #999;
+}
+
+.profile .section {
+    margin-top: 15px;
+}
+
+.question-title {
+    margin-top: 25px;
+}
+
+.question-tag {
+    margin-right: 5px;
+}
+
+.question-related {
+    line-height: 20px;
+    font-size: 12px;
+    margin-left: 0;
+    list-style: none;
+    padding-left: 0;
+}
+
+.question-wechat {
+    width: 95%;
+}
+
+.publish-tag-tab {
+    display: none;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+
+.publish-tag-tab .label-info {
+    white-space: normal;
+    margin: 5px 5px;
+    display: inline-block;
+}
+
+.community-menu {
+    color: #999;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.jumbotron {
+    margin: 50px;
+}
+
+.comment {
+    margin: 10px 0;
+}
+
+.btn-comment {
+    float: right;
+    margin-bottom: 10px;
+}
+
+.comments {
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.sub-comments {
+    border-radius: 5px;
+    margin-top: 10px;
+    border: 1px solid #eee;
+    padding-top: 15px;
+    margin-bottom: 15px;
+}
+
+.sub-comments .btn {
+    margin: 10px 0;
+}
+
+.comment-sp {
+    margin-top: 0;
+}
+
+.menu {
+    color: #999;
+    margin-top: 5px;
+}
+
+.menu .icon {
+    margin-right: 6px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.menu .comment-icon {
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.menu .comment-icon :hover {
+    color: #499ef3;
+}
+
+.menu .active {
+    color: #499ef3;
+}
+
+.menu .icon:hover {
+    color: #499ef3;
+}
+
+.footer {
+    text-align: center;
+    font-size: 12px;
+    color: #666;;
+    padding: 0 0 15px 0;
+}
+
+.red {
+    color: red !important;
+}
+
+
+.filter-tab ul li.yesbutton{
+	color:#0dad71;
+}
+.social {
+    /*height: 45px;*/
+    padding: 10px 6px;
+    background-color: #fff;
+	margin-bottom:20px;
+}
+.social a {
+    float: left;
+    width: 45px;
+    height: 45px;
+    margin-right: 6.5px;
+    margin-left: 6.5px;
+    position: relative;
+    color: #fff;
+}
+
+.social i {
+    font-size: 2.5em;
+    width: 45px;
+    height: 45px;
+    padding-top: 7px;
+    border-radius: 4px;
+}
+.sinaweb{
+	background-color:#f78585;
+}
+.weixin{
+	background-color:#6fc299;
+
+}
+.email{
+	background: #eca3ac;
+	padding-left: 5px;
+}
+
+.tags{
+	padding: 12px 10px 15px 20px;
+}
+.tags a{
+	width: 44%;
+	color: #fff;
+	display: inline-block;
+	margin: 0 5px 5px 0;
+	padding: 2px 6px;
+	line-height: 21px;
+	text-decoration:none;
+}
+.tags a:nth-child(9n+1) {
+    background-color: #15a287;
+}
+.tags a:nth-child(9n+2) {
+    background-color: #5cb85c;
+}
+.tags a:nth-child(9n+3) {
+    background-color: #d9534f;
+}
+.tags a:nth-child(9n+4) {
+    background-color: #567e95;
+}
+.tags a:nth-child(9n+5) {
+    background-color: #b433ff;
+}
+.tags a:nth-child(9n+6) {
+    background-color: #00a67c;
+}
+.tags a:nth-child(9n+7) {
+    background-color: #b37333;
+}
+.tags a:nth-child(9n+8) {
+    background-color: #f60;
+}
+.tags a:nth-child(9n) {
+    background-color: #4a4a4a;
+}
+
+
+
+.login{
+	width: 100%;
+height: 100%;
+position: absolute;
+/*background: url("../images/logo-banner.png") no-repeat center;
+    background-size: auto;*/
+background-size: 100% 100%;
+}
+.login-main{
+	width: 22%;
+height: auto;
+padding: 1%;
+box-sizing: border-box;
+margin: 12% 0 0 58%;
+}

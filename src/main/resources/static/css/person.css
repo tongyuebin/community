@@ -1,0 +1,253 @@
+.dialog-open body {
+	overflow: hidden;
+	padding-right: 17px;
+}
+/*总的对话框*/
+.dialogs{
+	position: fixed;
+	color: #7c7c7c;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	overflow: auto;
+	display: none;
+	z-index: 9999;
+}
+/*单个对话框*/
+.dialog{
+	position: relative;
+	width: 400px;
+	min-height: 300px;
+	padding: 15px;
+	margin: 30px auto;
+	background: #fff;
+	overflow:hidden;
+	display: none;
+}
+.dialog h1{
+	color: #333;
+	height: 30px;
+	/*line-height: 30px;*/
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 20px;
+	padding-bottom: 10px;
+	font-size:18px;
+	font-weight: normal;
+}
+.dialog .close{
+	position: absolute;
+	right:10px;
+	top:15px;
+	cursor: pointer;
+}
+
+.dialog .changPWDDiv {
+    width: 340px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+.dialog .box span {
+    color: #7c7c7c;
+	border-right: 1px solid #ccc;
+    width: 80px;
+    height: 20px;
+    line-height: 20px;
+    margin-top: 12px;
+    text-align: center;
+    display: block;
+}
+.dialog p{
+	text-align:center;
+}
+/*对话框背景*/
+.bg{
+	z-index: 999;/*数字越大越在上层*/
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	opacity: .5;
+	filter: Alpha(opacity=50);
+	display: none;
+}
+.dialog .box{
+	width: 100%;
+	height: 45px;
+	line-height: 45px;
+	border: 1px solid #ccc;
+	margin: 15px 0;
+	border-radius: 3px;
+	position: relative;
+}
+.dialog .box.focus {
+	border-color: #6ec558;
+	box-shadow: 0 0 5px #6ec558;
+}
+
+.dialog .box.blur{
+	border-color: #ccc;
+}
+/*文本input*/
+.dialog .box input[type="text"] {
+	width: 235px;
+	padding: 10px;
+	line-height: 24px;
+	border: 0;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+/*密码input*/
+.dialog .box input[type="password"] {
+	width: 255px;
+	height:40px;
+	padding: 10px;
+	line-height: 24px;
+	border: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+/*按钮input*/
+.dialog .box input[type="button"] {
+	background:#ff7800;
+	color:#fff !important;
+	display: block;
+	height: 35px !important;
+	line-height: normal !important;
+	margin: 5px !important;
+	padding: 0 10px;
+	border-radius: 2px;
+	border: 0 !important;
+	text-align: center;
+	cursor: pointer;
+	position: absolute;
+	right:0;
+	top:0;
+}
+/*异常提示框样式*/
+.dialog .error {
+	background: #fb8344;
+	color: #fff !important;
+	text-align: center;
+	height: 40px !important;
+	line-height: 40px !important;
+	margin: 20px 0;
+	display:none;
+}
+/*错误提示样式*/
+.dialog .box.errorput{
+border-color: #f00;
+box-shadow: 0 0 5px #aa0b0b;
+}
+.dialog .button {
+	width: 100%;
+	height: 45px;
+	line-height: 45px;
+	background: #5dbf45;
+	color: #fff;
+	margin: 0;
+	border: 0;
+	cursor: pointer;
+	position: relative;
+	border-radius:2px;
+}
+/*.button下的input样式*/	
+.dialog .button input {
+	background: none;
+	border: 0;
+	width: 100%;
+	color: #fff;
+	cursor: pointer;
+	line-height: 45px;
+}
+
+.mod-footer .button {
+	width: 10%;
+	height: 45px;
+	line-height: 45px;
+	background: #5dbf45;
+	color: #fff;
+	margin: 0;
+	border: 0;
+	cursor: pointer;
+	position: relative;
+	border-radius:2px;
+	margin-right:85px;
+}
+
+.person-avatar{
+	display:block;
+	padding:4px;
+	margin-bottom: 20px;
+	background-color:#fff;
+	text-align:center;
+}
+.person-center{
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	padding-left: 15px;
+	box-sizing: border-box;
+	background:#f4f4f4;
+	color:#0dad71;
+	margin: 20px 0;
+}
+.person-info{
+	width:100%;
+	padding-left: 15px;
+	margin: 20px 0;
+}
+.person-ul{
+	font-size:14px;
+	width:100%;
+	height100%；
+}
+.person-ul li{
+	line-height: 50px;
+	color:#a9a9a9;
+}
+.person-ul li input[type="text"]{
+	color: #3d3d3d;
+	height: 30px;
+	line-height: 30px;
+	margin-left: 20px;
+	text-indent: 10px;
+	width: 300px;
+	background:#fafafa;
+}
+.person-ul li input:focus {
+	border-color: #717171;
+	background: #fff !important;
+	color: #717171 !important;
+}
+
+.person-ul li label input[type="radio"]{
+	margin-right:5px;
+}
+.btn-save{
+	margin-left:295px;
+}
+.btn-save input{
+	cursor: pointer;
+	background:#717171;
+	color:#fff;
+	text-align: center;
+	border-radius: 2px;
+	border: 0;
+	line-height: 35px;
+	width: 100px;
+	margin: 0 auto;
+	margin-top: 0px
+}
+ul,ol{
+	list-style:none;
+	padding:0px 0px;
+}
+.error-tip {
+	display: none;
+	color: #f00;
+}
